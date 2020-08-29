@@ -1,0 +1,29 @@
+From the MIT scrum lecture
+	Will use log entries instead of meetings
+	
+	Daily standup: will log what was implemented since last checkin, goals for today's check-in, and challenges to that goal, take items from sprint backlog and turn into task list
+
+	Sprint plan(weekly), take items from product backlog and turn to sprint backlog
+
+	Sprint Review(weekly), take a look at what's been done, adjust product backlog as need be
+
+	Sprint Retrospective(weekly), take a look at working methods, and adjust accordingly.
+
+
+	Aug 20, 2020 - Have decided to use flask instead of django, don't need all that database admin for a simple app
+
+	Aug 22 -  did not work on Aug 21 because of reinstalling and updating computer OS (BSOD), now running python 3.8 as system standard. Reconfigured virtual environment and switched git hook to github.
+	imported geopy for functionality of converting a zip code to range of lats and longs, which should be usable with the dataframes gettable from john hopikins
+	biggest stumbling blocks was reconfiguring python interpreter (pycharm was anchored on 3.6) and installing packages no longer on the system.
+
+	Aug 25 returning to flask is troubling, may have second guesses about the framework
+	Did make a class that will find entries in the dataframe within the lat and long range returned by the geolocator class
+	There are two challenges
+		1.) the loop through methodology is slow, I get the sense pandas own dataframe methods are much faster
+		2.) so many false negatives, even with zip codes in new york,
+it may be better to use zip code information to find a county (or nearest county) and not to use zip codes as the unit of measure
+
+	Aug 28
+		using geopy and pygeoip to get a location off of an ip address,
+FIPS is outdated, so will next pull state and county info from the geolocator class to use as parameters to fleece out the info from the pandas dataframe
+Don't like the extra overhead, but location tracking seems to be a tall order. 	

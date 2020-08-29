@@ -1,0 +1,7 @@
+Covid alert is a mobile-first web app that's a frictionless way for users to learn about convifmed coronavirus cases and deaths in their area and/or state
+	The core features and mechanics
+		a text box to input a zip code or state
+		a map view of JUST the state or zip code for the user
+		plots on the map to clearly communicate the severity of Covid cases in the user's locale
+		geolocation to generate the map view automatically
+		
